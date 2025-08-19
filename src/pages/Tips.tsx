@@ -31,7 +31,8 @@ const Tips = () => {
       difficulty: "Začátečník",
       timeToRead: "2 min",
       icon: <Calculator className="h-5 w-5 text-primary" />,
-      downloadable: true
+      downloadable: true,
+      articleId: "rodinny-rozpocet-mesic"
     },
     {
       id: 2,
@@ -41,7 +42,8 @@ const Tips = () => {
       difficulty: "Začátečník",
       timeToRead: "3 min",
       icon: <ShoppingCart className="h-5 w-5 text-primary" />,
-      downloadable: true
+      downloadable: true,
+      articleId: "seznam-nakupu-ekonomie"
     },
     {
       id: 3,
@@ -51,7 +53,8 @@ const Tips = () => {
       difficulty: "Pokročilý",
       timeToRead: "4 min",
       icon: <PiggyBank className="h-5 w-5 text-primary" />,
-      downloadable: false
+      downloadable: false,
+      articleId: "navyky-financni-disciplina"
     },
     {
       id: 4,
@@ -61,7 +64,8 @@ const Tips = () => {
       difficulty: "Středně pokročilý",
       timeToRead: "5 min",
       icon: <FileText className="h-5 w-5 text-primary" />,
-      downloadable: true
+      downloadable: true,
+      articleId: "kontrola-vydaju-domov"
     },
     {
       id: 5,
@@ -71,7 +75,8 @@ const Tips = () => {
       difficulty: "Středně pokročilý",
       timeToRead: "6 min",
       icon: <Calendar className="h-5 w-5 text-primary" />,
-      downloadable: false
+      downloadable: false,
+      articleId: "denni-navyky-stabilita"
     },
     {
       id: 6,
@@ -81,7 +86,8 @@ const Tips = () => {
       difficulty: "Pokročilý",
       timeToRead: "7 min",
       icon: <TrendingUp className="h-5 w-5 text-primary" />,
-      downloadable: false
+      downloadable: false,
+      articleId: "organizace-cest-ekonomie"
     }
   ];
 
@@ -227,8 +233,11 @@ const Tips = () => {
                     size="sm" 
                     variant="outline" 
                     className="flex-1 group-hover:bg-primary group-hover:text-primary-foreground transition-colors"
+                    asChild
                   >
-                    Číst více
+                    <Link to={`/clanek/${tip.articleId}`}>
+                      Číst více
+                    </Link>
                   </Button>
                   {tip.downloadable && (
                     <Button size="sm" variant="outline">
