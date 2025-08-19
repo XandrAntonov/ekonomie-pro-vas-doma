@@ -91,6 +91,16 @@ const Footer = () => {
         </div>
 
         <div className="border-t pt-8 mt-8">
+          {/* Disclaimer */}
+          <div className="bg-amber-50 border border-amber-200 rounded-lg p-4 mb-6">
+            <p className="text-sm text-amber-800 leading-relaxed">
+              <strong>⚠️ Důležité upozornění:</strong> Tento web poskytuje pouze obecné informace a vzdělávací materiály. 
+              Nejedná se o finanční poradenství ani doporučení k investování. Obsah je určen pouze pro osobní rozvoj 
+              a zlepšení finanční disciplíny v každodenním životě. Před přijetím jakýchkoli finančních rozhodnutí 
+              se vždy poraďte s kvalifikovaným odborníkem.
+            </p>
+          </div>
+          
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-sm text-muted-foreground">
               © 2024 EkonomieProVás.net. Všechna práva vyhrazena.
