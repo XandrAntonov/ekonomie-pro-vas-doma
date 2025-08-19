@@ -86,7 +86,7 @@ const Index = () => {
                   Procházet články
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary" asChild>
+              <Button size="lg" variant="secondary" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90" asChild>
                 <Link to="/premium">
                   <Star className="mr-2 h-5 w-5" />
                   Vyzkoušet Premium
