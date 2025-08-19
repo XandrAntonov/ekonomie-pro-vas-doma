@@ -3,6 +3,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from 'react-router-dom';
 import { Users, Target, Award, BookOpen, Heart, TrendingUp } from 'lucide-react';
+import teamWorkingImage from "@/assets/about-team-working.jpg";
+import familySuccessImage from "@/assets/about-family-success.jpg";
 
 const About = () => {
   const values = [
@@ -55,9 +57,9 @@ const About = () => {
 
         {/* Naše mise */}
         <section className="mb-16">
-          <div className="bg-gradient-subtle rounded-2xl p-8 lg:p-12">
-            <div className="max-w-4xl mx-auto text-center">
-              <Award className="h-16 w-16 text-primary mx-auto mb-6" />
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <Award className="h-16 w-16 text-primary mb-6" />
               <h2 className="text-3xl font-bold mb-6">Naše mise</h2>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
                 Věříme, že každá česká rodina si zaslouží finanční stabilitu a klid. 
@@ -65,19 +67,26 @@ const About = () => {
                 ale pomoci vám vybudovat zdravé návyky, které vám dlouhodobě ušetří peníze 
                 a zjednoduší život.
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {values.map((value, index) => (
                   <div key={index} className="text-center">
-                    <div className="flex justify-center mb-4">
-                      <div className="p-3 rounded-full bg-accent">
+                    <div className="flex justify-center mb-3">
+                      <div className="p-2 rounded-full bg-accent">
                         {value.icon}
                       </div>
                     </div>
-                    <h3 className="text-xl font-semibold mb-3">{value.title}</h3>
-                    <p className="text-muted-foreground">{value.description}</p>
+                    <h3 className="text-lg font-semibold mb-2">{value.title}</h3>
+                    <p className="text-sm text-muted-foreground">{value.description}</p>
                   </div>
                 ))}
               </div>
+            </div>
+            <div>
+              <img 
+                src={teamWorkingImage} 
+                alt="Náš tým při práci na finančních řešeních"
+                className="w-full h-80 object-cover rounded-2xl shadow-card-custom"
+              />
             </div>
           </div>
         </section>
@@ -128,14 +137,21 @@ const About = () => {
                 </div>
               </div>
             </div>
-            <div className="text-center lg:text-left">
-              <div className="bg-gradient-financial text-primary-foreground p-8 rounded-2xl">
-                <h3 className="text-2xl font-bold mb-4">Více než 10 000</h3>
-                <p className="text-lg mb-4">českých rodin už využívá naše rady</p>
-                <p className="opacity-90">
-                  Připojte se k nim a začněte budovat lepší finanční budoucnost ještě dnes.
-                </p>
-              </div>
+            <div>
+              <img 
+                src={familySuccessImage} 
+                alt="Česká rodina dosáhla finančních cílů díky našim radám"
+                className="w-full h-80 object-cover rounded-2xl shadow-card-custom"
+              />
+            </div>
+          </div>
+          <div className="text-center mt-12">
+            <div className="bg-gradient-financial text-primary-foreground p-8 rounded-2xl max-w-md mx-auto">
+              <h3 className="text-2xl font-bold mb-4">Více než 10 000</h3>
+              <p className="text-lg mb-4">českých rodin už využívá naše rady</p>
+              <p className="opacity-90">
+                Připojte se k nim a začněte budovat lepší finanční budoucnost ještě dnes.
+              </p>
             </div>
           </div>
         </section>
