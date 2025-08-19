@@ -172,7 +172,7 @@ const Index = () => {
                   Zjistit více o Premium
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary" asChild>
+              <Button size="lg" variant="secondary" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90" asChild>
                 <Link to="/kontakt">
                   Kontaktovat nás
                 </Link>
